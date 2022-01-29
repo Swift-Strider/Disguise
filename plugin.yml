@@ -3,4 +3,9 @@ name: Disguise
 version: 0.0.1
 main: DiamondStrider1\Disguise\Main
 api: 4.0.0
+
+permissions:
+  disguise.command:
+    default: op
+    description: Whether you may use /disguise
 ...
