@@ -6,7 +6,6 @@ namespace DiamondStrider1\Disguise;
 
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\network\mcpe\protocol\PlayerListPacket;
 use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginOwned;

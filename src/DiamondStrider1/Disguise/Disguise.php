@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DiamondStrider1\Disguise;
 
-use pocketmine\entity\Skin;
 use pocketmine\player\Player;
 
 class Disguise
