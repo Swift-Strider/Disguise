@@ -1,6 +1,6 @@
 # Disguise
 
-![Disguise's Logo](/assets/icon.png)
+![Disguise's Logo](assets/icon.png)
 
 Disguise as other players with `/disguise <player>`
 
