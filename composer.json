@@ -1,4 +1,10 @@
 {
+    "autoload": {
+        "psr-0": {
+            "DiamondStrider1\\Disguise": "src",
+            "DiamondStrider1\\Disguise\\tests": "tests"
+        }
+    },
     "require-dev": {
         "pocketmine/pocketmine-mp": "4.0.0",
         "phpunit/phpunit": "^9.5",
