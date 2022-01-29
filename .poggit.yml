@@ -4,4 +4,5 @@ branches:
 projects:
   Disguise:
     path: ""
+    icon: assets/icon.png
 ...
