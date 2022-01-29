@@ -24,6 +24,7 @@ use pocketmine\command\CommandSender;
 use pocketmine\player\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginOwned;
+use pocketmine\world\particle\MobSpawnParticle;
 
 class DisguiseCommand extends Command implements PluginOwned
 {
@@ -49,16 +50,26 @@ class DisguiseCommand extends Command implements PluginOwned
                 return;
             }
             $sender->sendMessage("Disguising you as " . $other->getName() . ".");
+            $this->doParticles($sender);
             $this->api->disguise($sender, Cloak::fromPlayer($other));
             return;
         }
 
         if ($this->api->isDisguised($sender)) {
             $sender->sendMessage("Removing your disguise.");
+            $this->doParticles($sender);
             $this->api->removeDisguise($sender);
         } else {
             $sender->sendMessage("You don't have a disguise on!");
         }
+    }
+
+    private function doParticles(Player $player): void
+    {
+        $pos = $player->getPosition();
+        $p = new MobSpawnParticle(2, 3);
+        $world = $player->getWorld();
+        $world->addParticle($pos, $p, [$player]);
     }
 
     public function getOwningPlugin(): Plugin
