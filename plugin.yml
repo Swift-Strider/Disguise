@@ -1,0 +1,6 @@
+---
+name: Disguise
+version: 0.0.1
+main: DiamondStrider1\Disguise\Main
+api: 4.0.0
+...
